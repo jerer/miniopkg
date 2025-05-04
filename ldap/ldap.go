@@ -401,5 +401,6 @@ func NormalizeDN(dn string) (string, error) {
 	if err != nil {
 		return "", fmt.Errorf("DN (%s) parse failure: %w", dn, err)
 	}
-	return parsedDN.String(), nil
+	//return parsedDN.String(), nil
+	return dn.String(), nil
 }
