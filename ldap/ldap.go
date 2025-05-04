@@ -397,7 +397,7 @@ func LookupDN(conn *ldap.Conn, dn string, attrs []string) (*DNSearchResult, erro
 // NormalizeDN normalizes the DN. The ldap library here mainly lowercases the
 // attribute type names in the DN.
 func NormalizeDN(dn string) (string, error) {
-	parsedDN, err := ldap.ParseDN(dn)
+	_, err := ldap.ParseDN(dn)
 	if err != nil {
 		return "", fmt.Errorf("DN (%s) parse failure: %w", dn, err)
 	}
