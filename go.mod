@@ -1,4 +1,4 @@
-module github.com/minio/pkg/v3
+module github.com/jerer/miniopkg/v4
 
 go 1.23.0
 
